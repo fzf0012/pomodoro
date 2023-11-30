@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @StateObject var todoListViewModel = TodoListViewModel()  // Create a TodoListViewModel instance
+    @StateObject var todoListViewModel = TodoListViewModel()
 
     var body: some View {
         if authViewModel.isAuthenticated {
             DashboardView()
-                .environmentObject(todoListViewModel)  // Pass TodoListViewModel as an EnvironmentObject
+                .environmentObject(todoListViewModel)
         } else {
             LoginView()
         }

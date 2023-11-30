@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Todo: Identifiable, Codable {
+struct Todo: Identifiable, Codable, Hashable {
     var id: String = UUID().uuidString
     var title: String
     var description: String
@@ -15,4 +15,3 @@ struct Todo: Identifiable, Codable {
     var priority: Int
     var pomodoroSessionsCompleted: Int = 0
 }
-

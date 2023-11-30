@@ -10,6 +10,10 @@ import SwiftUI
 struct TodoDetailView: View {
     @Binding var todo: Todo
     var onSave: (Todo) -> Void
+    var onDelete: () -> Void
+    var isNewTodo: Bool
+    
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         Form {
@@ -23,6 +27,13 @@ struct TodoDetailView: View {
             }
             Button("Save") {
                 onSave(todo)
+            }
+            
+            if !isNewTodo {
+                Button("Delete", role: .destructive) {
+                    onDelete()
+                    presentationMode.wrappedValue.dismiss()
+                }
             }
         }
         .navigationTitle("Todo Details")

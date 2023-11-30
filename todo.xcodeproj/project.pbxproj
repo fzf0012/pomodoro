@@ -115,9 +115,9 @@
 				01B70C442B154B8B007E41A6 /* LoginView.swift */,
 				01B70C462B155205007E41A6 /* DashboardView.swift */,
 				01B70C482B155224007E41A6 /* TodoDetailView.swift */,
-				01B70C4A2B155970007E41A6 /* AuthenticationViewModel.swift */,
 				01B70C4C2B15598C007E41A6 /* TodoListViewModel.swift */,
 				01B70C532B156D88007E41A6 /* ContentView.swift */,
+				01B70C4A2B155970007E41A6 /* AuthenticationViewModel.swift */,
 			);
 			path = todo;
 			sourceTree = "<group>";
