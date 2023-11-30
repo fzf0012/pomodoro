@@ -27,6 +27,15 @@ struct TodoDetailView: View {
             }
             Button("Save") {
                 onSave(todo)
+                presentationMode.wrappedValue.dismiss()
+                
+            }
+            
+            if !isNewTodo {
+                Button("Delete", role: .destructive) {
+                    onDelete()
+                    presentationMode.wrappedValue.dismiss()
+                }
             }
             
             if !isNewTodo {
